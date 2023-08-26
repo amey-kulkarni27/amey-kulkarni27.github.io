@@ -68,7 +68,6 @@
     scroll-snap-align: start;
     position: relative;
     flex: 0 0 auto;
-    height: auto;
     list-style: none;
     background: white;
     border-radius: 10px;
@@ -76,13 +75,33 @@
     align-items: center;
     justify-content: flex-start;
     flex-direction: column;
+    padding: 20px;
+    margin: 0 8px;
+    min-width: calc((100% - 32px) / 3);
+    height: 350px;
+}
+
+.card h2 {
+    background-color: #f0f0f0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin: 5px;
+    max-height: 60px; /* Set a fixed maximum height for the title */
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.2;
 }
 
 .name_and_img {
     display: flex;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    /* padding: 10px 0; */
     background-color: #f0f0f0;
+    height: 100px;
+    overflow: hidden;
 }
 
 .card .img {
@@ -101,13 +120,16 @@
     border-radius: 50%;
 }
 
-.card h2 {
-    background-color: #f0f0f0;
-    text-align: center;
-    font-weight: 500;
-    font-size: 1.5rem;
-    margin: 30px 0 5px;
+.course {
+    width: 50%;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    text-align: center; /* Horizontally centre */
+    height: 100%; /* fill 100% of the height, so the alignment can take effect */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
 
 .desc {
     text-align: center;
@@ -119,20 +141,16 @@
 
 .tools
 {
-  text-align: center;
-  padding: 10px;
-  background-color: #f0f0f0;
-  width: 100%; /* Ensure sections take up full width */
-  font-family: 'Courier New', Courier, monospace;
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+    width: 100%; /* Ensure sections take up full width */
+    font-family: 'Courier New', Courier, monospace;
 }
 
-.course {
-    width: 50%;
-    /* background-color: #e0e0e0; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+
 
 
 /* The following lines of code make it "squeeze-proof" */
