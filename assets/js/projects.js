@@ -41,7 +41,25 @@ class projectPage {
     carou.addEventListener("mousedown", dragStart); // when the mouse is clicked
     carou.addEventListener("mousemove", dragging); // when the mouse is moved
     document.addEventListener("mouseup", dragStop); // when the mouse is lifted
+
+    const imgConts = document.querySelectorAll(".img");
+    const goldColour = "#FFD700";
+    imgConts.forEach((imgCont) => {
+      
+      imgCont.addEventListener('mouseenter', () => {
+        imgCont.style.backgroundColor = goldColour;
+      });
+
+      imgCont.addEventListener('mouseleave', () => {
+        imgCont.style.backgroundColor = '';
+      });
+    });
+      
+
+    
   }
+
+  
 }
 
 function whenDocumentLoaded(action) {
